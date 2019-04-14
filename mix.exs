@@ -10,7 +10,8 @@ defmodule Yet.Mixfile do
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      default_task: "mix_yet_api"
     ]
   end
 
@@ -40,7 +41,9 @@ defmodule Yet.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:plug_cowboy, "~> 1.0"}
+      {:plug_cowboy, "~> 1.0"},
+      {:httpotion, "~> 3.1.0"},
+      {:poison, "~> 3.1"}
     ]
   end
 
